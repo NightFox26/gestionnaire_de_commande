@@ -1,0 +1,89 @@
+#searchPage {
+    .searchBg {
+        height: 100vh;
+        background-image: url(image/fonds/bgSearch.jpg);
+        .tcs-container {
+            width: 700px;
+            max-height: 85%;
+            position: absolute;
+            top: 60px;
+            left: 150px;
+            right: auto;
+            overflow-y: auto;
+            background-color: rgba(150,150,150,0.9);
+            h1{
+                color:$primaryColor;
+                font-size: 26px;                
+                font-weight: bold;
+                span{
+                    font-size: 20px;
+                    color: black; 
+                    font-weight: normal;
+                }
+            }
+            .tcsLogo{
+                position: absolute;
+                right:20px;
+            }
+            .inline{
+                vertical-align: top;
+                margin-right: 45px;
+            }
+            h2{
+                color:$primaryColor;
+                font-size: 20px;
+                text-decoration: underline;
+                font-weight: bold;
+            }
+            ul{
+                padding-left: 20px;
+                li{
+                    list-style:square;
+                }
+                &.listClient{
+                    li{     
+                        width: 250px;
+                        margin-left: -20px;
+                        margin-bottom: 10px; 
+                        font-size: 20px;
+                        font-weight: bold;
+                        a.nameClient{
+                             width: 200px;
+                            display: inline-block;
+                            vertical-align: top;
+                        }
+                        .editClient{
+                            font-size: 18px;
+                            padding-left: 5px;
+                            display: inline-block;
+                            vertical-align: top;
+                            box-shadow: -2px 2px 5px #000;
+                        }
+                        table{                           
+                            td{
+                                text-transform: lowercase;
+                                vertical-align: top;
+                                font-size: 16px;
+                                font-weight:400;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $tablette) {
+    #searchPage {
+        .searchBg {
+            .tcs-container {
+                position: relative;
+                left: 0;
+                right: 0;
+                top: 0;
+                max-height: 75%;
+            }
+        }
+    }
+}

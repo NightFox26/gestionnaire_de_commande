@@ -1,0 +1,65 @@
+$width-container : 1260px;
+
+
+$primaryColor : rgb(0,126,255); 
+$primaryColorTransp : rgba(0,126,255,0.6); 
+
+$widgetColor : rgb(127,137,225); 
+$widgetColorTransp : rgba(127,137,225,0.8); 
+
+$grayBlack : rgb(100,100,100);
+$grayBlackTransp : rgb(100,100,100,0.9);
+
+$thirdColor : rgb(255,124,0); 
+$thirdColorTransp : rgba(255,124,0,0.8); 
+
+$red : rgb(255,84,84); 
+$green : rgb(94,194,74);
+$green2 : #90ee90;
+
+
+$retard : $red;
+$enAttente : gray;
+$enCours : orange;
+$fini : $green;
+$livre : $primaryColor;
+$urgent : #9162B5;
+$pourPeinture : #038B7F; 
+$attMatiere : white;
+
+
+@mixin colorLoop {
+    animation: colorchange 1s;
+    animation-iteration-count: infinite;
+    @keyframes colorchange
+        {
+          0%   {background: white;}          
+          50%  {background: #E98432;}          
+          100% {background: white;}
+        }
+}
+
+@mixin clignoteLoop {
+    animation: clignote 1s;
+    animation-iteration-count: infinite;
+    @keyframes clignote
+        {
+          0%   {color: white;}          
+          50%  {color: #E98432;}          
+          100% {color: white;}
+        }
+}
+
+@mixin clignoteLoopUrgence {
+    animation: clignoteUrgence 0.8s;
+    animation-iteration-count: infinite;
+    @keyframes clignoteUrgence
+        {
+          0%   {color: white;}          
+          50%  {color: $urgent;}          
+          100% {color: white;}
+        }
+}
+
+// responsive 
+$tablette : 1281px;

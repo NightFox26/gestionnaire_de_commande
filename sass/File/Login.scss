@@ -1,0 +1,18 @@
+#login {
+    background-image: url(image/fonds/bgBack.jpg); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    form {
+        width: 300px;
+        text-align: center;
+        p{
+            color: red;
+        }
+        input{
+            padding: 10px; 
+            margin: 10px;
+        }
+    }
+}

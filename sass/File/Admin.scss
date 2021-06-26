@@ -1,0 +1,85 @@
+#admin{
+    .adminBg{
+        height: 100vh;
+        background-image: url(image/fonds/bgAdmin.jpg);        
+        .adminWrapper{
+            position: absolute;
+            top: 60px;
+            left: 60px;
+            right: 50px; 
+            text-align: center;
+            max-height: 87%;
+            height: 100%;
+            overflow-y: auto;
+            scrollbar-width: 0px;
+            &::-webkit-scrollbar {
+                display: none;
+            }            
+            .tcs-container{
+                margin-bottom: 15px;
+                margin-left: 0;
+                margin-right: 0;
+                background-color: $grayBlackTransp;
+                border-radius: 5px;
+                border: 1px solid gray;
+                text-align: left;
+                h2{     
+                    margin: 0;
+                    margin-bottom: 5px;                    
+                }
+                ul{
+                    li{
+                        margin-bottom: 10px;
+                    }
+                }
+                form{                    
+                    input{
+                        line-height: 16px;
+                        margin-top: 4px;
+                        &[type="number"]{
+                            width: 65px;
+                        }
+                    }
+                    select{
+                        margin-top: 4px;
+                        height: 22px;
+                    }
+                    
+                    textarea{
+                        width: 100%;
+                    }
+                }                
+                &.ouvriersManage,
+                &.footerManage{
+                    width: 400px;
+                    display: none;
+                    vertical-align: top;
+                    margin: 0 20px;
+                    margin-bottom: 20px;
+                    form.inline{
+                        vertical-align: baseline;
+                    }
+                }
+                &.footerManage{
+                    h2{
+                        margin-bottom: 15px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $tablette) {
+    #admin{
+        .adminBg{             
+            .adminWrapper{
+                position: static;
+                #addOrderForm,
+                #listPiecesOrder{
+                    top:140px !important;
+                }
+            }
+        }
+    }
+}

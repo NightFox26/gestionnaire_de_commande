@@ -1,0 +1,33 @@
+footer {
+    height: 40px;
+    line-height: 40px;
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+    right: 0;
+    background-color: $primaryColorTransp;
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    transition: all 1s;
+
+    
+    marquee {
+        width: 80%;
+        line-height: inherit;
+        color: inherit;
+        font-size: inherit;
+    }
+}
+
+@media screen and(max-width:800px) {
+    footer {
+        display: none;
+    }
+}
+
+@media screen and(max-height:500px) {
+    footer {
+        display: none;
+    }
+}

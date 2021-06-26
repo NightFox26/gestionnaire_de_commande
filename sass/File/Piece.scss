@@ -1,0 +1,136 @@
+#piecePage {
+    .pieceBg {
+        height: 100vh;
+        background-image: url(image/fonds/bgPiece.jpg);
+        .tcs-container {
+            position: absolute;
+            max-width: 800px;
+            height: calc(100% - 130px);
+            box-shadow: 5px 5px 10px black;
+            top: 60px;
+            left: 0;
+            right: 0;
+            overflow: auto;            
+            &.cloturedPieceBorder{
+                border: 8px solid $thirdColor;
+            }
+            #cloturePiece{
+                float: right;
+                width: 80px;
+                line-height: 40px;
+                box-shadow: 2px 2px 4px #000;
+                font-size: 38px;
+                &.orange{
+                    background-color: $thirdColor;
+                    color: $grayBlack;
+                }
+                &.blue{
+                    background-color: $primaryColor;
+                    color: white;
+                }
+            }
+            h1 {
+                margin: 0;                
+                color: $primaryColor;
+                width: 60%;
+                vertical-align: top;
+                margin-right: 20px;
+            }
+            .qtPiece{
+                float: right;
+                a{
+                    background-color: dodgerblue;
+                    border-radius: 5px;
+                    padding: 0 5px;
+                }
+            }
+            
+            form{
+                margin-top: 20px;
+                textarea{
+                    width: 80%;
+                    height: 60px;
+                }
+                table{
+                    tr{                    
+                        height: 40px;
+                        table{
+                            tr{
+                                height: 20px;
+                            }
+                        }
+                    }
+                    td{                         
+                        position: relative;
+                        &:first-child{
+                            width:160px;
+                        }
+                        vertical-align: top;                   
+                        a{
+                            color:$primaryColor !important;
+                        }
+                        .heuresSup{
+                            color: orangered;
+                            text-decoration: underline;
+                            font-weight: bold;
+                        }
+                        
+                        ul{
+                            display: inline-block;
+                            vertical-align: top;                        
+                            margin: 0;
+                            li{
+                                a{
+                                    color:$primaryColor !important;
+                                }
+                            }
+                        }  
+                        textarea[name="infos"]{
+                            background-color: rgba($primaryColor,0.5);
+                            padding: 3px 8px;
+                            &::placeholder {
+                                color: dimgrey;
+                            }
+                        }
+                        textarea[name="infosUnique"]{
+                            background-color: lightgray;
+                            padding: 3px 8px;
+                            &::placeholder {
+                                color: dimgrey;
+                            }                            
+                        }
+                        #fileDiv{
+                            min-width: 320px;
+                            margin-bottom:15px;
+                        }
+                        .fileBtn{
+                            position: absolute;
+                            bottom: 0px;
+                            right: 0px;
+                            width: 50px;
+                            height: 30px;
+                        }
+                        table{
+                            td:first-child{
+                                min-width: auto;
+                                width:20px;
+                            }                           
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $tablette) {
+    #piecePage {
+        .pieceBg {
+            .tcs-container {
+                position: static;                
+                margin: 10px auto;
+                max-height: 75%;
+            }
+        }
+    }
+}

@@ -1,0 +1,231 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100vh;
+    background-image: url(image/fonds/bgBack.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+body {
+    margin: 0;
+    background-color: white; //a virer
+    display: none; //a activer
+    overflow-y: hidden;
+    a {
+        color: white;
+        text-decoration: none;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+}
+
+.bg {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.tcs-container {
+    max-width: $width-container;
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 20px;
+    border-radius: 0 12px 0 12px;
+}
+
+.b_shadow {
+    box-shadow: -5px 5px 10px black;
+}
+.btn_shadow{
+    box-shadow: 2px 2px 7px 1px #000 !important;
+}
+
+.t_shadow {
+    text-shadow: 1px 1px 2px black;
+}
+
+.backg_primary {
+    background-color: $primaryColorTransp;
+}
+
+.backg_secondary {
+    background-color: $widgetColorTransp;
+}
+
+.backg_secondary_no_transp {
+    background-color: $widgetColor;
+}
+
+.backg_gray {
+    background-color: $grayBlackTransp;
+}
+
+.backg_gray_no_transp {
+    background-color: $grayBlack;
+}
+
+.backg_third {
+    background-color: $thirdColorTransp;
+}
+
+.backg_third_no_transp {
+    background-color: $thirdColor;
+}
+
+.inline {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.float_right {
+    float: right;
+}
+
+hr {
+    border-color: $primaryColor;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.btn {
+    border: none;
+    border-radius: 2px;
+    padding: 3px 6px;
+    min-width: 28px;
+    cursor: pointer;
+    box-shadow: 2px 2px 4px black;
+}
+
+.btn_danger {
+    background-color: $red;
+}
+
+.closeBtn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+}
+
+.btn_valid {
+    background-color: $green2;
+}
+
+.btn_lightBlue {
+    background-color: #73b9d2;
+}
+
+.btn_warning {
+    background-color: white;
+}
+
+.btn_transp {
+    background-color: transparent;
+    border: none;
+}
+
+.btn_done {
+    background-color: $primaryColor;
+}
+
+.textAlert{
+    font-weight: bolder;    
+    font-size: 1.2em;
+}
+
+.textRed{
+    color: $red !important;
+    text-shadow: 1px 1px 1px black;
+}
+.textBlue{
+    color: $primaryColor !important;
+    text-shadow: 1px 1px 1px black;
+}
+.textGreen{
+    color: lightgreen !important;
+    text-shadow: 1px 1px 1px black;
+}
+.textOrange{    
+    color: $thirdColor !important;
+    text-shadow: 1px 1px 1px black;
+}
+.textBlack{
+    color: black !important;
+}
+
+.statutRetard{
+    background-color: $retard !important;
+}
+
+.statutFini{
+    background-color: $fini !important;
+}
+
+.statutLivre{
+    background-color: $livre !important;
+}
+
+.statutUrgent{
+    background-color: $urgent !important;
+}
+
+.statutPourPeinture{
+    background-color: $pourPeinture !important;   
+}
+
+.statutEnAttente{
+    background-color: $enAttente !important;
+}
+.statutAttenteMatiere{
+    background-color: $attMatiere !important;
+}
+.statutEnCours{
+    background-color: $enCours !important;
+}
+
+.insetAttenteMatiere{
+    box-shadow: inset 0px 0px 9px 6px white;
+}
+
+.insetRetard{
+    box-shadow: inset 0px 0px 10px 5px #ff0000;
+}
+
+.smallInput {
+    width: 50px !important;
+    text-align: right;
+}
+
+.handleDrag {
+    &:hover {
+        cursor: move;
+    }
+}
+
+.hidden{
+    display: none;
+}
+
+.capitalise{
+    text-transform: capitalize !important;
+}
+
+.bordered{
+    border: 1px solid black;
+    padding: 2px;
+    background-color: white;
+}
+

@@ -1,0 +1,76 @@
+#todoBox{
+    position: absolute;
+    width: 400px;
+    border-radius: 0 12px 0 12px; 
+    border:3px solid black;    
+    top: 200px;
+    right: 20px;
+    z-index: 10999;
+    display: none;
+    h2{        
+        margin: 0;
+        padding: 15px;        
+    }
+    hr{
+        margin: 0;        
+        border-color: black;
+    }
+    .todoListe{
+        height: 450px; 
+        background-color: aliceblue;
+        overflow-y: auto;
+        ul{
+            margin: 0;
+            padding: 10px 0;
+            li{
+                text-align: left;
+                margin-bottom: 5px;
+                padding: 3px 15px;
+                &.statut-waiting{
+                    background-color: rgba(255,0,0,0.5);
+                }
+                &.statut-done{
+                    background-color: rgba(0,255,0,0.5);
+                }
+                &.statut-validate{
+                    background-color: rgba(0,100,255,0.5);
+                }
+                .fa-user{
+                    color:$primaryColor;
+                }
+                .btnsTodo{
+                    float: right;
+                }
+                .tacheTexte{
+                    margin: 5px 0;
+                }
+            }
+            hr{                        
+                margin-bottom: 5px;        
+                border-color: $widgetColorTransp;
+            }
+        }
+    }
+    
+    form{
+        padding: 15px;
+        input[type="text"]{
+            padding: 3px 10px;
+            position: relative;
+            top: -5px;
+            width: 100%;
+            margin-bottom: 5px;
+        }
+    }
+}
+
+@media screen and (max-width: $tablette) {
+    #todoBox{          
+        top: 135px;
+        right: 20px; 
+        width: 350px;
+        .todoListe{
+            height: 340px;
+        }
+    }
+}

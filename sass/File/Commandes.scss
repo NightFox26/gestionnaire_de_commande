@@ -1,0 +1,298 @@
+#commandesPage {
+    .commandesBg {
+        height: 100vh;
+        background-image: url(image/fonds/bgCommandes.jpg);
+        .tcs-container {
+            max-width: 75%;
+            width: 100%;
+            position: absolute;
+            top: 60px;
+            left: 8%;
+            right: auto;
+            max-height: 85%;
+            overflow-y: auto;
+            h1 {
+                margin: 0;
+                margin-top: 15px;
+                margin-bottom: 20px;
+                display: inline-block;
+                &#title_listing_not_termined{
+                    display: block;
+                    color: $primaryColor;
+                    a{
+                        float: right;
+                        color: white !important;
+                        font-size: 17px;
+                        text-align: center;
+                        border: 1px solid black;
+                        padding: 5px 10px;
+                        border-radius: 5px;
+                        background-color: $primaryColor;
+                        box-shadow: 2px 2px 4px grey;
+                    }
+                }
+                #inputChangeMonth{
+                    position: absolute;
+                    left: 20px;
+                    top: 5px;
+                    display: none;
+                }
+            }
+            .countOrder {
+                max-width: 270px;
+                padding: 5px;
+                text-align: center;
+                border-radius: 5px 5px 0 0;
+                position: relative;
+                top: 1px;                
+                z-index: 1;
+            }
+            .codeColors {
+                max-width: 900px;
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                float: right;
+                div {
+                    padding: 3px 10px;
+                    margin: 0 5px;
+                    margin-bottom: 5px;
+                    line-height: 25px;
+                    border-radius: 5px;
+                    border: 1px solid black;            
+                    &#gestionBlFactures{
+                        background-color: $thirdColor;
+                        width: 52px;
+                        text-align: center;
+                    }
+                    &.allOrdersNonTermine {
+                        text-align: center;
+                        background-color: $widgetColor;
+                        width: 95%;
+                    }
+                }
+            }
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                position: relative;
+                border : 1px solid black;
+                z-index: 2;
+                thead{
+                    tr{
+                        border-radius: 5px;
+                        box-shadow: inset 0 0 10px 1px black;                        
+                    }
+                }
+                tr{
+                    transition: all 0.5s;
+                    border-radius: 5px;
+                }
+                tr:hover{
+                    box-shadow: inset 0 0 10px 3px black;
+                }
+                th,
+                td {
+                    border-bottom: 1px solid black;
+                    padding: 7px 4px;
+                    text-align: center;
+                    &.tdClient {
+                        .tableInfosClient {
+                            display: none;
+                            min-width: 210px;
+                            border: none;
+                            tr,
+                            td {
+                                background-color: transparent;
+                                text-transform: lowercase;
+                                vertical-align: top;
+                                border: none;
+                                text-align: left;
+                            }
+                            td:first-child{
+                                min-width: auto;
+                                width:20px;
+                                padding: 7px 0px;
+                            }
+                        }
+                    }
+                    &.width560 {
+                        min-width: 610px;
+                        position: relative;
+                        .spanIconesClignotement{
+                            font-size: 18px;
+                            color: orange;
+                            text-shadow: 1px 1px 1px black;
+                            position: absolute;
+                            left: 18%;
+                            .fa-hourglass-half{ 
+                                margin-right: 10px;
+                                @include clignoteLoop;
+                            }
+                            .fa-tachometer-alt{
+                                @include clignoteLoopUrgence;
+                            }
+                        }
+                        
+                    }
+                }
+                tr {
+                    &:nth-child(even) {
+                        background-color: gray;
+                    }
+                    &:hover {
+                        background-color: $primaryColor;
+                    }
+                }
+                td {
+                    .tdPieces:hover {
+                        cursor: pointer;
+                    }
+                    .listePieceCommande {
+                        display: none;
+                        li{
+                            display: flex;
+                            align-items: center;
+                            &.clotured{
+                                display: flex;
+                                justify-content: space-between;
+                                .linkRefPiece {
+                                    max-width: 100%;
+                                }
+                                tr:hover{
+                                    background-color: transparent;
+                                    box-shadow: none;
+                                }
+                            }
+                            .urgencePlus{
+                                color : $urgent;
+                                border-color: $urgent;
+                                &[data-urgenceplus="1"]{
+                                    @include clignoteLoopUrgence;
+                                }
+                            }
+                            .linkRefPiece {
+                                display: inline-block;
+                                max-width: 35%;
+                                width: 100%;
+                                text-align: center;
+                                table{
+                                    display: inline-block;
+                                    vertical-align: middle;
+                                    padding-right: 15px;
+                                    margin-bottom: 0;
+                                    border: none;
+                                    width: 100%;
+                                    tbody{
+                                        max-width: 100%;
+                                        width: 100%;
+                                        td,tr{
+                                            border: none;             
+                                        }
+                                        td:nth-child(1){
+                                            min-width: 100%;
+                                            width: 100%;
+                                            max-width: 200px;
+                                            color : black;
+                                        }
+                                        td.clotured{
+                                            border: 1px solid black;
+                                            box-shadow: 0px 1px 10px 0px white;
+                                            /* text-shadow: 0px 0px 11px red; */
+                                            background-color: #f3421a;
+                                            color: white !important;
+                                            text-shadow: 1px 1px 2px black;
+                                            font-weight: bolder;
+                                        }
+                                        td:nth-child(2){
+                                            text-align: left;
+                                            max-width: 100px;
+                                            width: 100px;
+                                        }    
+                                    }
+                                }
+                            }
+                            .startCountTime{
+                                @include colorLoop;
+                            }
+                            hr{
+                                border-color: #a7acb1;
+                            }                            
+                        }
+                    }
+                    .pieceForm {
+                        display: inline-block;
+                        margin-left: 5px;
+                        position: relative;
+                        &.addTimeForm{
+                            background-color: lightgray;
+                            padding: 2px 5px; 
+                            border-radius: 2px;
+                        }
+                        input{
+                            text-align: center;
+                            width: 70px;
+                        }
+                        textarea {
+                            display: none;
+                            position: absolute;
+                            bottom: 20px;
+                            left: 0;
+                            right: 0;
+                            width: 100%;
+                            z-index: 9999;
+                        }
+                        input[name="heuresSup"]{
+                            margin: 0;
+                            width: 23px;
+                            height: 22px;
+                            vertical-align: bottom;
+                            color: orangered;
+                            position: relative; 
+                            top: 1px;
+                        }
+                        select{
+                            height: 35px;
+                        }
+                    }
+                    &.orderStatut{
+                        white-space: nowrap;
+                        i{
+                            float: right;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and(max-width:1800px) {
+    #commandesPage {
+        .commandesBg {        
+            .tcs-container {
+                max-width: 85%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $tablette) {
+    #commandesPage {
+        .commandesBg {
+            .tcs-container {
+                position: static;
+                max-width: 100%;
+                max-height: 75%;
+                .codeColors {
+                    max-width: 100%;                    
+                    float: none;
+                    margin-bottom: 20px;
+                }
+                table{
+                    margin-bottom: 30px;
+                }
+            }
+        }
+    }
+}

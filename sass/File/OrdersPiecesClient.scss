@@ -1,0 +1,84 @@
+#ordersPiecesClientPage {
+    .bg {
+        height: 100vh;
+        background-image: url(image/fonds/bgSearch.jpg);
+        .tcs-container {
+            position: absolute;
+            top: 65px;
+            left: 10%;
+            max-height: 85%;
+            overflow-y: auto;
+            h1 {
+                color: $primaryColor;
+                font-size: 20px;
+                text-decoration: underline;
+                text-shadow: 1px 1px 1px black;
+            }
+
+            h2 {
+                font-size: 17px;
+            }
+
+            .ordersList,
+            .piecesList {
+                max-height: calc(85vh/2);
+                overflow-y: auto;
+                margin-bottom: 20px;
+                padding: 0 15px;
+                border: 1px solid gray;
+                border-radius: 10px 0 10px 0;
+                background-color: darkgray;
+
+                ul {
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    align-items: flex-start;
+
+                    li.order,
+                    li.piece {
+                        width: 130px;
+                        margin: 5px;
+                        border: 1px solid grey;
+                        padding: 5px 10px;
+                        background-color: lightgray;
+                        box-shadow: 1px 1px 2px black;
+
+                        a {
+                            color: slategrey;
+                        }
+                    }
+                }
+            }
+
+            .piecesList {
+                background-color: dimgray;
+
+                ul {
+                    li.piece {
+                        width: 180px;
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+@media screen and(max-width:$tablette) {
+    #ordersPiecesClientPage {
+        .bg {
+            .tcs-container {                
+                top: 100px;
+                left: 5px;
+                right: 5px;
+                max-height: 75%;
+                background-color: transparent;
+                .ordersList,
+                .piecesList {
+                    max-height: calc(75vh/2);                    
+                }
+            }
+        }
+    }
+}

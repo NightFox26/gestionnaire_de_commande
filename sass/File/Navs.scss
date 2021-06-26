@@ -1,0 +1,85 @@
+nav.users {
+    height: 50px;
+    width: 80%;
+    
+    ul {
+        height: 100%;
+        margin: 0;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        li {
+            text-shadow: 1px 1px 1px black;
+            padding: 3px 5px;
+            &.color-ouvrier{
+                color: white;
+            }
+            &.color-interimaire{
+                color: white;                
+            }
+            &.color-cadre{
+                color: $thirdColor;
+            }
+            &:hover{
+                cursor: pointer;
+            }
+            &.selected {
+                border: 2px solid orange;
+                border-top: 0px;
+                border-right: 0px;
+                border-radius: 0 0 0 5px;
+            }
+        }
+    }
+}
+
+nav.menu {
+    width: 50px;
+    height: 350px;
+    ul {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        li {
+            box-shadow: none !important;
+            #configBtnMenu,
+            #gestionBlFactures{
+                i{
+                    color:$thirdColor;
+                }
+            }
+            i {
+                font-size: 30px;
+                text-shadow: 1px 1px 1px black;
+            }
+        }
+    }
+}
+
+
+@media screen and(max-width:1800px) {
+    nav.users { 
+         width: 100%; 
+    }    
+}
+
+@media screen and (max-width: $tablette) {
+   nav.users {
+        opacity: 1;
+        width: 100%;        
+    }
+}
+
+@media screen and (max-width: $tablette) {
+    nav.menu {
+        width: 100%;
+        height: 45px;  
+        ul{
+            flex-direction: row;
+            margin: 0px;
+        }
+    }
+}

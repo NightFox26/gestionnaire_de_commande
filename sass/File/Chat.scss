@@ -1,0 +1,56 @@
+#chatBox{
+    width: 350px;
+    border-radius: 0 12px 0 12px; 
+    border:3px solid black;
+    position: absolute;
+    left: 20px;
+    top: 330px;
+    z-index: 10999;
+    display: none;
+    h2{        
+        margin: 0;
+        padding: 15px;        
+    }    
+    hr{
+        margin: 0;
+        border-color: black;
+    }
+    .messageListe{
+        height: 350px;   
+        padding: 0 15px;
+        background-color: aliceblue;
+        overflow-y: auto;
+        ul{
+            margin: 0;
+            padding: 10px 0;
+            li{
+                text-align: left;
+                margin-bottom: 10px;
+                &:nth-child(even){
+                  text-align: right; 
+                }
+                .user{
+                    color:$primaryColor;
+                    margin-left: 5px;
+                }
+            }
+        }
+    }
+    
+    form{
+        padding: 15px;
+        input[type="text"]{
+            width: 78%;
+        }
+    }
+}
+
+@media screen and (max-width: $tablette) {
+    #chatBox{          
+        top: 135px;
+        left: 20px; 
+        .messageListe{
+            height: 370px;
+        }
+    }
+}

@@ -1,0 +1,89 @@
+#blFacturesPage {
+    .blFacturesBg {
+        height: 100vh;
+        background-image: url(image/fonds/bgBlFact.jpg);
+        .tcs-container {
+            max-width: 75%;
+            width: 100%;
+            position: absolute;
+            top: 60px;
+            left: 8%;
+            right: auto;
+            max-height: 85%;
+            overflow-y: auto;
+            #monthChoice{
+                display: inline-block;
+                padding: 5px 10px;
+                background-color: white;
+                margin-bottom: 0;
+                border : 1px solid black;
+                border-bottom: none;
+                border-radius: 5px 5px 0 0;                    
+                a{
+                    font-size: 24px;
+                    i{
+                        color: gray; 
+                        text-shadow: 3px 3px 2px black
+                    }
+                }
+                #inputChangeMonth{
+                    display: none
+                }
+            }
+            table{
+                width: 100%;
+                border-collapse: collapse;
+                background-color: white;
+                border : 1px solid black;
+                thead{
+                    tr{
+                        border-radius: 5px;
+                        box-shadow: inset 0 0 10px 1px black;
+                        background-color: $grayBlack;
+                        color: white;
+                        th{
+                            padding: 15px 0;
+                        }
+                    }
+                }
+                tr{
+                    transition: all 0.5s;
+                }
+                tr:hover{
+                    box-shadow: inset 0 0 10px 3px black;
+                }
+                th,
+                td {
+                    border-bottom: 1px solid black;
+                    padding: 1px 4px;
+                    text-align: center;
+                    ul.listingPieces{
+                        text-align: left;
+                        a{
+                            color:black;
+                        }
+                    }
+                    input[type="checkbox"]{
+                        width: 30px;
+                        height: 30px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $tablette) {
+    #blFacturesPage {
+        .blFacturesBg {
+            .tcs-container {
+                position: static;
+                max-width: 100%;
+                max-height: 75%;
+                table{
+                    margin-bottom: 30px;
+                }
+            }
+        }
+    }
+}

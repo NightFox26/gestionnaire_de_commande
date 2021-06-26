@@ -1,0 +1,2 @@
+<aside style="text-align:center;padding:1em 0;" class="clock backg_primary b_shadow"> <iframe src="https://www.zeitverschiebung.net/clock-widget-iframe-v2?language=fr&size=medium&timezone=Europe%2FParis" width="100%" height="115" frameborder="0" seamless></iframe>
+</aside>
